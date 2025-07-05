@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.jpg" alt="OEMed Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Find Doctor</a></li>
+          <li><a href="apointment.html">Appointment</a></li>
+          <li class="dropdown">
+            <a href="#">Services <i class="fas fa-caret-down"></i></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Emergency Service <i class="fas fa-caret-down"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="auth-controls">
+        <a href="login.html" class="btn login">Log In</a>
+        <a href="signup.html" class="btn signup">Sign Up</a>
+        <!-- <div class="lang-toggle">
+          <a href="#">English</a> | <a href="#">বাংলা</a>
+        </div> -->
+      </div>
+    </div>
+  </header>
+  <!-- HERO -->
+  <section class="heroo">
+    <div class="hero-text">
+      <h1>Book Your Appointment Online</h1>
+      <p>Schedule appointments quickly and easily with our digital platform.</p>
+    </div>
+    <div class="hero-img">
+      <img src="images/icons/appoint.png" alt="Appointment illustration" />
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="appointment">
+    <h2>Appointment</h2>
+    <form>
+      <input type="text" placeholder="First Name" required />
+      <input type="text" placeholder="Last Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Mobile Number" required />
+      <input type="text" placeholder="NIC" />
+      <input type="date" id="appointment-date" placeholder="Appointment Date" />
+      <input type="time" placeholder="Appointment Time" />
+      <select>
+        <option>Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+      <select>
+        <option>Department Name</option>
+        <option>Cardiology</option>
+        <option>Neurology</option>
+        <option>Dermatology</option>
+      </select>
+      <select>
+        <option>Doctor Name</option>
+        <option>Dr. Smith</option>
+        <option>Dr. Jones</option>
+        <option>Dr. Lee</option>
+      </select>
+      <textarea placeholder="Address"></textarea>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>MediLab Hospital</h4>
+        <p>Committed to your health and convenience.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Hours</h4>
+        <p>Mon - Fri: 9:00 - 18:00</p>
+        <p>Saturday: 9:00 - 13:00</p>
+        <p>Sunday: Closed</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>info@medilab.com</p>
+        <p>012-345-6789</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 MediLab Hospital. All rights reserved.
+    </div>
+  </footer>
+    
+</body>
+</html>

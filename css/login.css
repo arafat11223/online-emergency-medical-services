@@ -36,17 +36,9 @@ body {
   margin-bottom: 18px;
 }
 
-.logo {
-  background: #e6f0fa;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 6px;
+.logo img{
+  height: 100px;
 }
-
 .logo-icon {
   font-size: 2rem;
   color: #1a73e8;
@@ -54,7 +46,7 @@ body {
 }
 
 .brand-title {
-  font-size: 1.3rem;
+  font-size: 100%;
   font-weight: 700;
   margin: 0;
   color: #222;

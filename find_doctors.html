@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doctor Finder</title>
+  <link rel="stylesheet" href="css/find_doctors.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.jpg" alt="OEMed Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="find_doctors.html">Find Doctor</a></li>
+          <li><a href="apointment.html">Appointment</a></li>
+          <li class="dropdown">
+            <a href="#">Services <i class="fas fa-caret-down"></i></a>
+            
+          </li>
+          
+          <li class="dropdown">
+            <a href="#">Emergency Service <i class="fas fa-caret-down"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="auth-controls">
+        <a href="login.html" class="btn login">Log In</a>
+        <a href="signup.html" class="btn signup">Sign Up</a>
+        <!-- <div class="lang-toggle">
+          <a href="#">English</a> | <a href="#">বাংলা</a>
+        </div> -->
+      </div>
+    </div>
+  </header>
+  <header>
+    <h1>Find Your Doctor</h1>
+  </header>
+
+  <section class="search-filter">
+    <input
+      type="text"
+      id="searchBox"
+      placeholder="Search doctors by name..."
+      aria-label="Search doctors by name"
+    />
+
+    <div class="category-filters">
+      <label><input type="checkbox" value="cardiologist" /> Cardiologist</label>
+      <label><input type="checkbox" value="dermatologist" /> Dermatologist</label>
+      <label><input type="checkbox" value="pediatrician" /> Pediatrician</label>
+      <label><input type="checkbox" value="neurologist" /> Neurologist</label>
+      <label><input type="checkbox" value="sexologist" /> Sexologist</label>
+    </div>
+  </section>
+
+  <section id="doctorList" class="doctor-list">
+    <!-- Doctor cards will be rendered here dynamically -->
+  </section>
+
+  <script src="js/find-doctors.js"></script>
+</body>
+</html>

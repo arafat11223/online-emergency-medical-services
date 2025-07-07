@@ -1,0 +1,146 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.search-filter {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+#searchBox {
+  flex: 1 1 300px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#searchBox:focus {
+  border-color: #2980b9;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 400px;
+}
+
+.category-filters label {
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.category-filters input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.doctor-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.doctor-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+}
+
+.doctor-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #3498db;
+}
+
+.doctor-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+
+.doctor-specialty {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2980b9;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.doctor-experience {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.book-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .search-filter {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #searchBox,
+  .category-filters {
+    flex: 1 1 100%;
+  }
+}

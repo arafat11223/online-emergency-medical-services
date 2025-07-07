@@ -23,13 +23,15 @@ body {
 .main-header .container {
   max-width: 1200px;
   margin: auto;
+  margin-bottom: -1%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo img {
-  height: 100px;
+  height: 55px;
+  width: 120px;
 }
 
 .nav-links {
@@ -79,15 +81,21 @@ body {
 
 /* Hero Section Styling */
 .hero {
-  background: linear-gradient(to bottom right, #eef3fb, #dceeff);
+  background: linear-gradient(to bottom right, #4d83db, #dceeff);
   padding: 60px 20px;
   text-align: center;
+  background-image: linear-gradient(rgba(194, 204, 214, 0.6), rgba(133, 180, 226, 0.6)),url('bckimg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  color: rgb(0, 0, 0);
 }
 
 .outer-circle {
-  width: 180px;
-  height: 180px;
-  border-radius: 70%;
+  width: 190px;
+  height: 190px;
+  border-radius: 80%;
   border: 2px solid #aa0404;
   display: flex;
   align-items: center;
@@ -99,12 +107,14 @@ body {
   height: 170px;
   border-radius: 60%;
   size: 10%;
-  background-color: #aa0404;
+  background-color: #d40e0e;
   color: white;
   border: none;
-  font-size: 25px;
+  font-size: 24px;
+  font-family:Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
+
 
 .hero-content h1 {
   display: flex;
@@ -125,8 +135,8 @@ body {
 }
 
 .service-card {
-  background: #fff;
-  border-radius: 15px;
+  background: #ffffff;
+  border-radius: 25px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.07);
   padding: 25px 20px;
   width: 200px;
@@ -142,10 +152,11 @@ body {
   font-size: 30px;
   color: #6c63ff;
   margin-bottom: 12px;
+  opacity: 1;
 }
 
 .service-card h3 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -232,7 +243,7 @@ form button:hover {
 
 /* FOOTER */
 footer {
-  background: #2d6cdf;
+  background: #0f2040;
   color: #fff;
   padding: 2rem 5%;
   margin-top: 4rem;

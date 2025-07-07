@@ -1,0 +1,178 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f8;
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.members-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.member-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #3498db;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.member-varsity {
+  font-size: 1rem;
+  color: #2980b9;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #3498db;
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.social-links a:hover {
+  color: #1d6fa5;
+}
+
+/* Responsive Media Queries */
+
+/* Large tablets and smaller desktops */
+@media (max-width: 900px) {
+  .members-container {
+    max-width: 700px;
+    gap: 20px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .member-photo {
+    width: 110px;
+    height: 110px;
+  }
+  .member-name {
+    font-size: 1.2rem;
+  }
+  .member-varsity {
+    font-size: 0.95rem;
+  }
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets and large phones */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  .members-container {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  .member-card {
+    padding: 18px;
+  }
+  .member-photo {
+    width: 100px;
+    height: 100px;
+  }
+  .member-name {
+    font-size: 1.1rem;
+  }
+  .member-varsity {
+    font-size: 0.9rem;
+  }
+  .social-links a {
+    font-size: 1.4rem;
+    gap: 15px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .members-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .member-card {
+    padding: 15px;
+  }
+  .member-photo {
+    width: 90px;
+    height: 90px;
+  }
+  .member-name {
+    font-size: 1rem;
+  }
+  .member-varsity {
+    font-size: 0.85rem;
+  }
+  .social-links {
+    gap: 12px;
+  }
+  .social-links a {
+    font-size: 1.3rem;
+  }
+}

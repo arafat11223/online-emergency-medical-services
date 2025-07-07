@@ -16,7 +16,7 @@ const members = [
   {
     name: "Irfanul Karim",
     varsity: "International Islamic University Chittagong",
-    photo: "https://randomuser.me/api/portraits/women/12.jpg",
+    photo: "images/Irfan.png",
     facebook: "https://www.facebook.com/share/1AiEoPHLdt/",
     github: "https://github.com/Irfan-IIUC-197",
   },

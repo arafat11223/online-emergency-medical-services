@@ -23,7 +23,8 @@ body {
 .main-header .container {
   max-width: 1200px;
   margin: auto;
-  margin-bottom: -1%;
+  margin-bottom: -0.5%;
+  margin-top: -0.5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -173,6 +174,10 @@ body {
   justify-content: space-between;
   padding: 4rem 5%;
   background: #e5f0ff;
+  background-image: linear-gradient(rgba(194, 204, 214, 0.6), rgba(133, 180, 226, 0.6)),url('appointBgm.jpg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .hero-text {

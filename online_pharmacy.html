@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medical Online Shop - Responsive 50/50 Mobile Cart</title>
+  <link rel="stylesheet" href="css/online_pharmacy.css" />
+</head>
+<body>
+  <header>
+    <h1>Medical Online Shop</h1>
+  </header>
+
+  <main class="container">
+    <!-- Search bar -->
+    <section class="controls" aria-label="Search products">
+      <input type="search" id="searchInput" placeholder="Search for medicines..." aria-label="Search products" />
+    </section>
+
+    <!-- Main content: products and cart -->
+    <div class="content-wrapper">
+      <section class="products" id="productsGrid" aria-live="polite" tabindex="0">
+        <!-- Products rendered by JS -->
+      </section>
+
+      <section class="cart" aria-label="Shopping cart summary" tabindex="0">
+        <h2>Shopping Cart</h2>
+        <div id="cartItems">
+          <p>Your cart is empty.</p>
+        </div>
+        <div id="cartTotal">Total: ৳ 0.00</div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/online_pharmacy.js"></script>
+</body>
+</html>

@@ -115,6 +115,8 @@ body {
   border: none;
   cursor: pointer;
 }
+/* ------- */
+
 
 /* Responsive */
 @media (max-width: 768px) {

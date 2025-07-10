@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
   <!-- Header Section -->
@@ -15,9 +17,9 @@
     <div class="logo">
       <img src="images/logo.jpg" alt="">
     </div>
-    
+
     <button class="hamburger" id="hamburger">&#9776;</button>
-    
+
     <nav class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="apointment.html">Appointment</a>
@@ -42,97 +44,96 @@
         </div>
       </div>
     </nav>
-    
+
     <div class="auth-buttons">
       <a href="login.html" class="login">Log in</a>
       <a href="signup.html" class="signup">Sign up</a>
     </div>
   </header>
 
-  
+
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      
+
       <div class="hero-content">
         <h1>24/7 Emergency Medical Services,<br>Right at Your Fingertips
-            <div class="outer-circle"><a href="ambulance-request.html" class="round-btn">CALL AMBULANCE</a>
-            </div>
+          <div class="outer-circle"><a href="ambulance-request.html" class="round-btn">CALL AMBULANCE</a>
+          </div>
         </h1>
       </div>
-    </div>      
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-user-md"></i>
-          <h3><a href="find_doctors.html">Online Doctors</a></h3>
-          <p>Consult Instantly</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-ambulance"></i>
-          <h3>Emergency Services</h3>
-          <p>Call Now</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-vials"></i>
-          <h3>Diagnostic Lab</h3>
-          <p>Book Tests</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-pills"></i>
-          <h3>Pharmacy Delivery</h3>
-          <p>Order Medicine</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-heartbeat"></i>
-          <h3>Health Packages</h3>
-          <p>Explore Plans</p>
-        </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-user-md"></i>
+        <h3><a href="find_doctors.html">Online Doctors</a></h3>
+        <p>Consult Instantly</p>
       </div>
+      <div class="service-card">
+        <i class="fas fa-ambulance"></i>
+        <h3>Emergency Services</h3>
+        <p>Call Now</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-vials"></i>
+        <h3>Diagnostic Lab</h3>
+        <p>Book Tests</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-pills"></i>
+        <h3>Pharmacy Delivery</h3>
+        <p>Order Medicine</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Health Packages</h3>
+        <p>Explore Plans</p>
+      </div>
+    </div>
     </div>
   </section>
 
 
   <!-- ********** -->
-<section class="consultation-section">
+  <section class="consultation-section">
   <h2>30+ Consult with top doctors across specialties</h2>
   <p>Get expert advice from our doctors</p>
 
   <div class="specialties">
-    <div class="specialty">
+    <div class="specialty" data-specialty="Anesthesiology">
       <img src="images/anesthesiology.png" alt="">
       <p>Anesthesiology</p>
     </div>
-    <div class="specialty">
+    <div class="specialty" data-specialty="cardiologist">
       <img src="images/cardiology.png" alt="">
       <p>Cardiology</p>
     </div>
-    <div class="specialty">
+    <div class="specialty" data-specialty="Psychiatry">
       <img src="images/psychiatry.png" alt="Psychiatry">
       <p>Psychiatry</p>
     </div>
-    <div class="specialty">
+    <div class="specialty" data-specialty="Colorectal Surgery">
       <img src="images/colorectal.png" alt="">
       <p>Colorectal Surgery</p>
     </div>
-    <div class="specialty">
+    <div class="specialty" data-specialty="Dentistry">
       <img src="images/dentistry.png" alt="">
       <p>Dentistry</p>
     </div>
-    <div class="specialty">
+    <div class="specialty" data-specialty="Gynecology">
       <img src="images/gynecology.png" alt="">
       <p>Gynecology</p>
     </div>
-    <div class="specialty">
+    <div class="specialty" data-specialty="Hematology">
       <img src="images/hematology.png" alt="">
       <p>Hematology</p>
-    </div>
-    </div>
     </div>
   </div>
 </section>
 
-<!-- ***** -->
+
+  <!-- ***** -->
   <footer>
     <div class="footer-container">
       <div class="footer-section">
@@ -166,3 +167,15 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script>
+  document.querySelectorAll(".specialty").forEach(box => {
+    box.addEventListener("click", () => {
+      const specialty = box.dataset.specialty;
+      window.location.href = `find_doctors.html?specialty=${encodeURIComponent(specialty)}`;
+    });
+  });
+</script>
+
+</body>
+
+</html>

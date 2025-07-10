@@ -41,6 +41,49 @@ const doctors = [
     experience: 7,
     photo: "https://randomuser.me/api/portraits/men/34.jpg",
   },
+  {
+    id: 7,
+    name: "Dr. Emily Johnson",
+    specialty: "Dermatology",
+    experience: 10,
+    photo: "images/rafew.jpg",
+  },
+  {
+    id: 7,
+    name: "Dr. Emily Johnson",
+    specialty: "Dermatology",
+    experience: 10,
+    photo: "images/rafew.jpg",
+  },
+  {
+    id: 7,
+    name: "Dr. Emily Johnson",
+    specialty: "Dermatology",
+    experience: 10,
+    photo: "images/rafew.jpg",
+  },
+  {
+    id: 7,
+    name: "Dr. Emily Johnson",
+    specialty: "Dermatology",
+    experience: 10,
+    photo: "images/rafew.jpg",
+  },
+  {
+    id: 7,
+    name: "Dr. Emily Johnson",
+    specialty: "dermatology",
+    experience: 10,
+    photo: "images/rafew.jpg",
+  },
+  {
+    id: 7,
+    name: "Dr. Emily Johnson",
+    specialty: "Hematology",
+    experience: 10,
+    photo: "images/rafew.jpg",
+  },
+  
 ];
 
 const searchBox = document.getElementById("searchBox");
@@ -92,3 +135,28 @@ categoryFilters.forEach((cb) => cb.addEventListener("change", filterDoctors));
 
 // Initial render
 renderDoctors(doctors);
+// --------
+// Check for specialty from URL
+const urlParams = new URLSearchParams(window.location.search);
+const specialtyFromUrl = urlParams.get("specialty");
+
+if (specialtyFromUrl) {
+  // Uncheck all checkboxes first
+  categoryFilters.forEach(cb => cb.checked = false);
+
+  // Find matching checkbox and check it
+  categoryFilters.forEach(cb => {
+    if (cb.value.toLowerCase() === specialtyFromUrl.toLowerCase()) {
+      cb.checked = true;
+    }
+  });
+
+  // Clear search box
+  searchBox.value = "";
+
+  // Run the filter
+  filterDoctors();
+
+  // Optional: scroll into view
+  doctorList.scrollIntoView({ behavior: "smooth" });
+}

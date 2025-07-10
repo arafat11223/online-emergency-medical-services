@@ -1,7 +1,8 @@
 * {
-  margin: 0;
+  margin-top: -0.4%;
   padding: 0;
   box-sizing: border-box;
+  margin-bottom: -1%;
 }
 
 body {
@@ -22,8 +23,8 @@ body {
 }
 
 .logo img {
-  height: 55px;
-  width: 120px;
+  height: 80px;
+  width: 95px;
 }
 
 .nav-links {
@@ -126,7 +127,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 50px;
+  padding: 80px;
   color: rgb(0, 0, 0);
 }
 
@@ -205,16 +206,15 @@ body {
 }
 /* HERO SECTION */
 .heroo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem 5%;
-  background: #e5f0ff;
+  background: linear-gradient(to bottom right, #4d83db, #dceeff);
+  padding: 60px 20px;
+  text-align: center;
   background-image: linear-gradient(rgba(194, 204, 214, 0.6), rgba(133, 180, 226, 0.6)),url('appointBgm.jpg');
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
+  padding: 80px;
+  color: rgb(0, 0, 0);
 }
 
 .hero-text {

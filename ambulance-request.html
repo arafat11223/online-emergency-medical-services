@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ambulance Request</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #8ba6c2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 25px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 15px;
+      background-color: #007aff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005ecb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Ambulance Request Form</h2>
+    <form id="ambulanceForm">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required placeholder="+8801XXXXXXXXX" />
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required placeholder="Enter your address or use auto locate"></textarea>
+
+      <button type="button" onclick="autoLocate()">Auto Locate</button>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <script>
+    function autoLocate() {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          const { latitude, longitude } = position.coords;
+          document.getElementById("address").value = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        }, function (error) {
+          alert("Unable to retrieve location.");
+        });
+      } else {
+        alert("Geolocation not supported by your browser.");
+      }
+    }
+
+    document.getElementById("ambulanceForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const phone = document.getElementById("phone").value;
+      const address = document.getElementById("address").value;
+
+      if (phone && address) {
+        alert("✅ Ambulance request submitted successfully!");
+        // Future step: Send data to backend or save it locally
+      } else {
+        alert("⚠️ Please fill out all required fields.");
+      }
+    });
+  </script>
+
+</body>
+</html>

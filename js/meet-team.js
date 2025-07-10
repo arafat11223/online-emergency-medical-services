@@ -7,24 +7,24 @@ const members = [
     github: "https://github.com/arafat11223",
   },
   {
-    name: "Rafew",
+    name: "Aryan Nur Rafew",
     varsity: "International Islamic University Chittagong",
     photo: "images/rafew.jpg",
-    facebook: "https://www.facebook.com/irfanul.karim.853943",
+    facebook: "https://www.facebook.com/share/16oUHkRgbY/",
     github: "https://github.com/ANRafew",
   },
   {
     name: "Irfanul Karim",
     varsity: "International Islamic University Chittagong",
     photo: "images/Irfan.png",
-    facebook: "https://www.facebook.com/share/1AiEoPHLdt/",
+    facebook: "https://www.facebook.com/irfanul.karim.853943",
     github: "https://github.com/Irfan-IIUC-197",
   },
   {
     name: "Abdullah Tausin",
     varsity: "International Islamic University Chittagong",
     photo: "images/tausin.jpg",
-    facebook: "https://www.facebook.com/share/16oUHkRgbY/",
+    facebook: "https://www.facebook.com/share/1AiEoPHLdt/",
     github: "https://github.com/Irfan-IIUC-197",
   },
 ];

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ambulance Request</title>
+  <title>Resque Team Request</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -65,8 +65,50 @@
   <div class="form-container">
     <div class="logo">
     <img src="images/logo.jpg" alt=""></div>
-    <h2>Ambulance Request Form</h2>
-    <form id="ambulanceForm">
+    <h2>Resque Team Request</h2>
+    <form id="resqueForm">
+      <!-- **** -->
+  <style>
+    .logo img{
+      height: 10%;
+      width: 20%;
+      margin-bottom: -7%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .tick-container {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      font-size: 1em;
+      margin-bottom: 1px;
+    }
+
+    .tick-option {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+    label {
+      cursor: pointer;
+    }
+    </style>
+  </head>
+    <form>
+      <div class="tick-container">
+        <input type="checkbox" id="option1">
+        <label for="option1">Fire Department</label>
+
+        <input type="checkbox" id="option2">
+        <label for="option2">Police Department</label>
+
+        <input type="checkbox" id="option3">
+        <label for="option3">Animal Control</label>
+      </div><br>
+    </form>
+
+      <!-- ***** -->
       <label for="phone">Phone Number:</label>
       <input type="tel" id="phone" name="phone" required placeholder="+8801XXXXXXXXX" />
 
@@ -77,16 +119,6 @@
       <button type="submit">Submit Request</button>
     </form>
   </div>
-  <style>
-    .logo img{
-      height: 10%;
-      width: 20%;
-      margin-bottom: -7%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
 
   <script>
     function autoLocate() {
@@ -102,14 +134,13 @@
       }
     }
 
-    document.getElementById("ambulanceForm").addEventListener("submit", function (event) {
+    document.getElementById("resqueForm").addEventListener("submit", function (event) {
       event.preventDefault();
       const phone = document.getElementById("phone").value;
       const address = document.getElementById("address").value;
 
       if (phone && address) {
-        alert("✅ Ambulance request submitted successfully!");
-        // Future step: Send data to backend or save it locally
+        alert("✅  Nearby Officials has been Alerted!");
       } else {
         alert("⚠️ Please fill out all required fields.");
       }

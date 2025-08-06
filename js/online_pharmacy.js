@@ -135,3 +135,65 @@ searchInput.addEventListener("input", renderProducts);
 // Initial render
 renderProducts();
 renderCart();
+async function downloadCartAsPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  const cartEntries = Object.values(cart);
+  if (cartEntries.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
+
+  // Title styling
+  doc.setFontSize(18);
+  doc.setFont("helvetica", "bold");
+  doc.text("Shopping Cart Summary", 14, 20);
+
+  // Prepare table data
+  const tableRows = cartEntries.map(item => ({
+    name: item.name,
+    qty: item.qty,
+    unitPrice: `TK ${item.price.toFixed(2)}`,
+    totalPrice: `TK ${(item.price * item.qty).toFixed(2)}`
+  }));
+
+  // Use AutoTable for great tables!
+  doc.autoTable({
+    startY: 30,
+    head: [["Product Name", "Qty", "Unit Price", "Total Price"]],
+    body: tableRows.map(row => [row.name, row.qty, row.unitPrice, row.totalPrice]),
+    styles: { font: "helvetica", fontSize: 12, cellPadding: 4, valign: 'middle' },
+    headStyles: { fillColor: [108, 42, 141], textColor: 255, fontStyle: "bold" },
+    alternateRowStyles: { fillColor: [245, 245, 250] },
+    columnStyles: {
+      0: { cellWidth: 80 },
+      1: { halign: 'middle', cellWidth: 20 },
+      2: { halign: 'middle', cellWidth: 40 },
+      3: { halign: 'middle', cellWidth: 40 }
+    },
+    margin: { left: 14, right: 14 },
+    didDrawPage: function (data) {
+      // Footer with page number
+      const pageCount = doc.internal.getNumberOfPages();
+      doc.setFontSize(10);
+      doc.setTextColor(150);
+      const page = doc.internal.getCurrentPageInfo().pageNumber;
+      doc.text(`Page ${page} of ${pageCount}`, doc.internal.pageSize.getWidth() / 2, doc.internal.pageSize.getHeight() - 10, { align: 'center' });
+    }
+  });
+
+  // Grand total with bold style
+  const finalY = doc.lastAutoTable.finalY || 30;
+  const grandTotal = cartEntries.reduce((sum, i) => sum + i.price * i.qty, 0);
+  doc.setFontSize(14);
+  doc.setFont("helvetica", "bold");
+  doc.text(`Total: TK ${grandTotal.toFixed(2)}`, 14, finalY + 15);
+
+  doc.save("shopping_cart.pdf");
+}
+
+// Attach the click event
+if (document.getElementById("downloadPdfBtn")) {
+  document.getElementById("downloadPdfBtn").addEventListener("click", downloadCartAsPDF);
+}

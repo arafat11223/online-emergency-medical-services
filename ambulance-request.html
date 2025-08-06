@@ -58,23 +58,13 @@
     button:hover {
       background-color: #005ecb;
     }
-
-    .logo img {
-      height: 10%;
-      width: 20%;
-      margin-bottom: -7%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
   </style>
 </head>
 <body>
 
   <div class="form-container">
     <div class="logo">
-      <img src="images/logo.jpg" alt="logo">
-    </div>
+    <img src="images/logo.jpg" alt=""></div>
     <h2>Ambulance Request Form</h2>
     <form id="ambulanceForm">
       <label for="phone">Phone Number:</label>
@@ -87,33 +77,28 @@
       <button type="submit">Submit Request</button>
     </form>
   </div>
+  <style>
+    .logo img{
+      height: 10%;
+      width: 20%;
+      margin-bottom: -7%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 
   <script>
     function autoLocate() {
       if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(async function (position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
           const { latitude, longitude } = position.coords;
-
-          document.getElementById("address").value = `Getting address for: ${latitude}, ${longitude}...`;
-
-          try {
-            const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`);
-            const data = await response.json();
-
-            if (data && data.display_name) {
-              document.getElementById("address").value = data.display_name;
-            } else {
-              document.getElementById("address").value = `Latitude: ${latitude}, Longitude: ${longitude}`;
-            }
-          } catch (error) {
-            document.getElementById("address").value = `Latitude: ${latitude}, Longitude: ${longitude}`;
-            alert("❌ Could not fetch address details.");
-          }
+          document.getElementById("address").value = `Latitude: ${latitude}, Longitude: ${longitude}`;
         }, function (error) {
-          alert("❌ Unable to retrieve location.");
+          alert("Unable to retrieve location.");
         });
       } else {
-        alert("❌ Geolocation is not supported by your browser.");
+        alert("Geolocation not supported by your browser.");
       }
     }
 
@@ -124,7 +109,7 @@
 
       if (phone && address) {
         alert("✅ Ambulance request submitted successfully!");
-        
+        // Future step: Send data to backend or save it locally
       } else {
         alert("⚠️ Please fill out all required fields.");
       }

@@ -17,8 +17,18 @@
     <!-- Search bar -->
     <section class="controls" aria-label="Search products">
       <input type="search" id="searchInput" placeholder="Search for medicines..." aria-label="Search products" />
+      <!-- PRESCRIPTION -->
+      <div class="upload-section">
+    <label for="imageUpload">Upload Prescription:</label>
+    <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+    <button type="submit">Submit</button>
+  </div>
+  
+      <!-- ** -->
     </section>
+<!-- ----- -->
 
+ <!-- ______ -->
     <!-- Main content: products and cart -->
     <div class="content-wrapper">
       <section class="products" id="productsGrid" aria-live="polite" tabindex="0">

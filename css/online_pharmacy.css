@@ -32,6 +32,7 @@ header {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
+
 }
 .controls input[type="search"] {
   width: 100%;
@@ -42,6 +43,7 @@ header {
   border-radius: 8px;
   outline-offset: 3px;
   transition: border-color 0.3s;
+  height: 10%;
 }
 .controls input[type="search"]:focus {
   border-color: #9b1c6e;
@@ -247,6 +249,47 @@ header {
   flex-shrink: 0;
 }
 
+/* --- */
+
+  .search-upload-wrapper {
+    display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; 
+  }
+
+  .upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 5%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .upload-section label {
+    font-weight: 600;
+  }
+
+  .upload-section input[type="file"] {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .upload-section button {
+    padding: 6px 12px;
+    background-color:#6c2a8d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .upload-section button:hover {
+    background-color: #005fa3;
+  }
+/* ___ */
 /* Responsive adjustments */
 
 /* Tablets and below: stack vertically */

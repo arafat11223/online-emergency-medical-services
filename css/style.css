@@ -472,8 +472,9 @@ footer .footer-bottom {
   border: 1px solid #cdd8f6;
   padding: 20px;
   margin: 30px auto;
-  width: 90%;
-  max-width: 900px;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   position: relative;
@@ -485,6 +486,7 @@ footer .footer-bottom {
   width: 90px;
   height: 90px;
   border-radius: 12px;
+  margin-bottom: 1%;
   object-fit: cover;
   border: 2px solid #3f72af;
   background: white;
@@ -493,7 +495,19 @@ footer .footer-bottom {
 .ad-content {
   flex: 1;
 }
-
+.ad-content h{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 13px;
+  color: #888;
+  font-family: sans-serif;
+}
+.ad-content h1{
+  margin: 0 0 10px;
+  font-size: 32px;
+  color: #2f3e75;
+}
 .ad-content h2 {
   margin: 0 0 10px;
   font-size: 22px;
@@ -518,6 +532,7 @@ footer .footer-bottom {
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
+  margin-bottom: 3%;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;

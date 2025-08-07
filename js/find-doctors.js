@@ -1,87 +1,59 @@
 const doctors = [
   {
     id: 1,
-    name: "Dr. Arafat Hossain",
+    name: "Dr. Tanvir Ahmed Khan",
     specialty: "cardiologist",
     experience: 12,
-    photo: "images/arafat.jpg",
+    photo: "images/Cardiologist.jpg",
   },
   {
     id: 2,
-    name: "Dr. Abdullah Tausin",
+    name: "Dr. Nusrat Jahan Tuli",
     specialty: "Dentistry",
     experience: 8,
-    photo: "images/tausin.jpg",
+    photo: "images/Dentist.jpg",
   },
   {
     id: 3,
-    name: "Dr. Jhonny",
+    name: "Dr. Rezaul Karim Shuvo",
     specialty: "Gynecology",
     experience: 50,
-    photo: "images/johnny.jpg",
+    photo: "images/Gynecologist.jpg",
   },
   {
     id: 4,
-    name: "Dr. David Lee",
+    name: "Dr. Sharmin Akter Jahan",
     specialty: "Psychiatry",
     experience: 15,
-    photo: "https://randomuser.me/api/portraits/men/52.jpg",
+    photo: "images/Psychiatrist.jpg",
   },
   {
     id: 5,
-    name: "Dr. Laura Brown",
+    name: "Dr. Farzana Yasmin Chowdhury",
     specialty: "Anesthesiology",
     experience: 9,
-    photo: "https://randomuser.me/api/portraits/women/22.jpg",
+    photo: "images/Anesthesiologist.jpg",
   },
   {
     id: 6,
-    name: "Dr. James Wilson",
+    name: "Dr. Mahmudul Hasan Joy",
     specialty: "Colorectal Surgery",
     experience: 7,
-    photo: "https://randomuser.me/api/portraits/men/34.jpg",
+    photo: "images/Colorectal Surgerist.jpg",
   },
   {
     id: 7,
-    name: "Dr. Emily Johnson",
+    name: "Dr. Ayesha Siddika Mim",
     specialty: "Dermatology",
     experience: 10,
-    photo: "images/rafew.jpg",
+    photo: "images/Dermatologist.jpg",
   },
   {
     id: 7,
-    name: "Dr. Emily Johnson",
-    specialty: "Dermatology",
-    experience: 10,
-    photo: "images/rafew.jpg",
-  },
-  {
-    id: 7,
-    name: "Dr. Emily Johnson",
-    specialty: "Dermatology",
-    experience: 10,
-    photo: "images/rafew.jpg",
-  },
-  {
-    id: 7,
-    name: "Dr. Emily Johnson",
-    specialty: "Dermatology",
-    experience: 10,
-    photo: "images/rafew.jpg",
-  },
-  {
-    id: 7,
-    name: "Dr. Emily Johnson",
-    specialty: "dermatology",
-    experience: 10,
-    photo: "images/rafew.jpg",
-  },
-  {
-    id: 7,
-    name: "Dr. Emily Johnson",
+    name: "Dr. Mohammad Rakib Hasan",
     specialty: "Hematology",
     experience: 10,
-    photo: "images/rafew.jpg",
+    photo: "images/Hematologist.jpg",
   },
   
 ];
@@ -105,7 +77,7 @@ function renderDoctors(filteredDoctors) {
       <h2 class="doctor-name">${doc.name}</h2>
       <p class="doctor-specialty">${doc.specialty}</p>
       <p class="doctor-experience">${doc.experience} years of experience</p>
-      <button class="book-btn" aria-label="Book appointment with ${doc.name}">Book Now</button>
+      <a href = "apointment.html">Book now</a>
     </article>
   `
     )

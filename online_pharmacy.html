@@ -19,16 +19,16 @@
       <input type="search" id="searchInput" placeholder="Search for medicines..." aria-label="Search products" />
       <!-- PRESCRIPTION -->
       <div class="upload-section">
-    <label for="imageUpload">Upload Prescription:</label>
-    <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
-    <button type="submit">Submit</button>
-  </div>
-  
+        <label for="imageUpload">Upload Prescription:</label>
+        <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+        <button type="submit">Submit</button>
+      </div>
+
       <!-- ** -->
     </section>
-<!-- ----- -->
+    <!-- ----- -->
 
- <!-- ______ -->
+    <!-- ______ -->
     <!-- Main content: products and cart -->
     <div class="content-wrapper">
       <section class="products" id="productsGrid" aria-live="polite" tabindex="0">
@@ -41,6 +41,16 @@
           <p>Your cart is empty.</p>
         </div>
         <div id="cartTotal">Total: ৳ 0.00</div>
+        <!-- Payment options -->
+        <fieldset aria-label="Select payment method" style="margin-top: 1rem; border:none; padding: 0;">
+          <legend style="font-weight:600;">Select Payment Method:</legend>
+          <label>
+            <input type="radio" name="paymentMethod" value="bkash" checked /> bKash
+          </label>
+          <label style="margin-left: 1rem;">
+            <input type="radio" name="paymentMethod" value="nagad" /> Nagad
+          </label>
+        </fieldset>
         <button id="downloadPdfBtn" class="btn-details" aria-label="Download cart as PDF">Download</button>
       </section>
 

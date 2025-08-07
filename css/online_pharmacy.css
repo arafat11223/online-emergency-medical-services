@@ -348,3 +348,36 @@ header {
   }
 
 }
+.cart fieldset {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;        /* prevent wrapping */
+  gap: 2rem;                /* space between options */
+  align-items: center;      /* vertically center inputs and labels */
+}
+
+.cart fieldset label {
+  flex: 0 0 auto;           /* fixed width per label (auto based on content) */
+  font-weight: normal;
+  cursor: pointer;
+  white-space: nowrap;      /* prevent label text wrapping */
+}
+
+.cart fieldset label input {
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+/* Remove previous media query forcing stacking */
+@media (max-width: 480px) {
+  .cart fieldset label {
+    /* Remove flex-basis 100%; to prevent stacking */
+    white-space: nowrap;
+  }
+}
+

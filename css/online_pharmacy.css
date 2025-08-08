@@ -134,6 +134,26 @@ header {
   transition: background-color 0.3s ease;
   user-select: none;
 }
+
+.custom-btn{
+  background: #f3f3f3;
+  color: rgb(8, 7, 7);
+  border: none;
+  align-items: 50%;
+  border-radius: 8px;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.8px;
+  margin-right: 2px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+.custom-btn:hover {
+    background-color: #e152c7;
+  }
+
 .btn-details:hover,
 .btn-details:focus {
   background: #9b1c6e;
